@@ -22,7 +22,7 @@ function App() {
                 throw new Error('Input must be an object with a "data" property that is an array');
             }
   
-            const res = await axios.post('http://localhost:5000/bfhl', { data: parsedData.data });
+            const res = await axios.post('https://bajaj-finiserv.onrender.com:5000/bfhl', { data: parsedData.data });
             console.log('Server response:', res.data);
             setResponse(res.data);
         } catch (error) {
